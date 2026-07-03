@@ -1,3 +1,5 @@
+Language: [简体中文](README.md) | 华夏文
+
 # DeepSeek 自动易模
 
 感梁圣开源 DeepSeek V4 Pro 之惠。然每百万 token 索直二十四元，余资寡薄，不能久承，故作此插件，以避峰时之费。
