@@ -1,11 +1,22 @@
+<p align="center">
+  <img src="https://count.getloli.com/get/@astrbot_plugin_deepseek_automatic_switch?theme=gelbooru-h" alt="访问计数" />
+</p>
+
 # DeepSeek 自动切换
 
-DeepSeek V4 Pro 在每日高峰期涨价时，本插件会在 LLM 请求发出前自动切换模型：
+感恩梁圣开源DeepSeek V4 Pro之惠，然每百万token索直二十四元，余力薄难承，故作此插件。
+在每日高峰期涨价时，本插件会在 LLM 请求发出前自动切换模型：
 
 - 北京时间 09:00-12:00、14:00-18:00：使用你配置的备用模型。
 - 其他时间：使用你配置的 DeepSeek V4 Pro。
 
 插件通过 AstrBot 的会话级 Provider 偏好切换模型，不会改全局默认模型。
+
+## 安装方法
+
+1. 将插件文件夹放入 AstrBot 的 `data/plugins/` 目录
+2. 重启 AstrBot 或使用插件管理命令重载插件
+3. 在 AstrBot WebUI 中配置插件参数
 
 ## 配置
 
