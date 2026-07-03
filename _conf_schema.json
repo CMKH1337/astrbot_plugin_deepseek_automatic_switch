@@ -1,0 +1,21 @@
+{
+  "enabled": {
+    "type": "bool",
+    "description": "启用 DeepSeek V4 Pro 高峰期自动切换",
+    "default": true
+  },
+  "deepseek_provider_id": {
+    "type": "string",
+    "description": "低峰期使用的 DeepSeek V4 Pro Provider ID",
+    "default": "",
+    "_special": "select_provider",
+    "hint": "请选择你在 AstrBot 中配置的 DeepSeek V4 Pro 模型提供商"
+  },
+  "peak_provider_id": {
+    "type": "string",
+    "description": "高峰期切换到的备用 Provider ID",
+    "default": "",
+    "_special": "select_provider",
+    "hint": "每日 09:00-12:00、14:00-18:00 北京时间自动使用该模型"
+  }
+}
