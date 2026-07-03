@@ -1,3 +1,5 @@
+语言：简体中文 | [华夏文](README_wy.md)
+
 # DeepSeek 自动切换
 
 感恩梁圣开源DeepSeek V4 Pro之惠，然每百万token索直二十四元，余力薄难承，故作此插件。
