@@ -35,8 +35,4 @@
 
 首次请求进入对应时段时，插件会在该会话内写入 Provider 偏好；之后同会话会保持当前时段应使用的模型。跨过高峰期边界后，下一次 LLM 请求会自动切换到新的目标模型。
 
-<p align="center">
-  <img src="https://count.getloli.com/get/@astrbot_plugin_deepseek_automatic_switch?theme=gelbooru-h" alt="访问计数" />
-</p>
-
 这梁文锋真他吗牛逼。
