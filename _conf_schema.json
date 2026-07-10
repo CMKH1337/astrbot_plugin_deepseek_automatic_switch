@@ -4,18 +4,49 @@
     "description": "启用 DeepSeek V4 Pro 高峰期自动切换",
     "default": true
   },
+  "provider_switch_rules": {
+    "type": "template_list",
+    "description": "模型提供商切换规则",
+    "default": [],
+    "hint": "点击加号添加多组模型。当前会话使用某组中的任一模型时，只会在该组的低峰与高峰模型之间切换；第一组同时作为默认规则。",
+    "obvious_hint": true,
+    "templates": {
+      "rule": {
+        "name": "切换规则",
+        "display_item": "deepseek_provider_id",
+        "items": {
+          "deepseek_provider_id": {
+            "type": "string",
+            "description": "低峰期模型 Provider",
+            "default": "",
+            "_special": "select_provider",
+            "hint": "例如 DeepSeek V4 Pro"
+          },
+          "peak_provider_id": {
+            "type": "string",
+            "description": "高峰期模型 Provider",
+            "default": "",
+            "_special": "select_provider",
+            "hint": "例如 DeepSeek V4 Flash"
+          }
+        }
+      }
+    }
+  },
   "deepseek_provider_id": {
     "type": "string",
     "description": "低峰期使用的 DeepSeek V4 Pro Provider ID",
     "default": "",
     "_special": "select_provider",
-    "hint": "请选择你在 AstrBot 中配置的 DeepSeek V4 Pro 模型提供商"
+    "hint": "旧版配置迁移项",
+    "invisible": true
   },
   "peak_provider_id": {
     "type": "string",
     "description": "高峰期切换到的备用 Provider ID",
     "default": "",
     "_special": "select_provider",
-    "hint": "每日 09:00-12:00、14:00-18:00 北京时间自动使用该模型"
+    "hint": "旧版配置迁移项",
+    "invisible": true
   }
 }
