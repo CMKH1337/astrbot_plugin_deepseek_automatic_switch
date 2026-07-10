@@ -1,7 +1,7 @@
 name: astrbot_plugin_deepseek_automatic_switch
 display_name: DeepSeek 自动切换
 desc: DeepSeek V4 Pro 高峰期自动切换到用户选择的备用模型，低峰期自动切回。
-version: v1.0.0
+version: v1.1.0
 author: CMKH
 repo: https://github.com/CMKH1337/astrbot_plugin_deepseek_automatic_switch
 astrbot_version: ">=4.16,<5"
