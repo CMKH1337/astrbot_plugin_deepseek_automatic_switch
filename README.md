@@ -39,3 +39,46 @@
 首次请求进入对应时段时，插件会在该会话内写入 Provider 偏好；之后同会话会保持当前时段应使用的模型。跨过高峰期边界后，下一次 LLM 请求会自动切换到新的目标模型。
 
 这梁文锋真他吗牛逼。我要当梁文锋的狗
+
+# 更新日志
+
+## v1.1.0
+
+### 新增
+
+- 支持配置多组 DeepSeek 模型 Provider 切换规则。
+- 每条规则可分别选择：
+  - 低峰期使用的 DeepSeek V4 Pro Provider。
+  - 高峰期使用的 DeepSeek V4 Flash Provider。
+- 支持在 AstrBot WebUI 插件配置页通过 `+` 添加多个 Pro/Flash 切换组合。
+- `/deepseek_switch_status` 与 `/ds_switch_status` 现会显示：
+  - 当前会话使用的 Provider。
+  - 已配置的全部切换规则。
+  - 当前时段将切换到的目标 Provider。
+
+### 改进
+
+- 插件会根据会话当前使用的 Provider 自动匹配对应的切换组合。
+
+  例如，存在以下规则：
+
+  | 低峰期 Provider | 高峰期 Provider |
+  | --- | --- |
+  | DeepSeek V4 Pro A | DeepSeek V4 Flash A |
+  | DeepSeek V4 Pro B | DeepSeek V4 Flash B |
+
+  当会话使用 `DeepSeek V4 Pro B` 时，进入高峰期只会切换至 `DeepSeek V4 Flash B`，不会切换到其他组合。
+
+- 当当前会话 Provider 不属于任意已配置规则时，自动使用规则列表中的第一组作为默认规则。
+- 保持旧版单组 `deepseek_provider_id` 与 `peak_provider_id` 配置兼容，升级后旧配置仍可继续使用。
+
+### 配置变更
+
+新增 `provider_switch_rules` 配置项，用于管理多组模型切换规则。
+
+每条规则包含：
+
+| 配置字段 | 说明 |
+| --- | --- |
+| `deepseek_provider_id` | 低峰期使用的 Provider，例如 DeepSeek V4 Pro |
+| `peak_provider_id` | 高峰期使用的 Provider，例如 DeepSeek V4 Flash |
