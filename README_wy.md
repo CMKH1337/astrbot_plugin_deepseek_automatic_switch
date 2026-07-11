@@ -1,4 +1,4 @@
-Language: [简体中文](README.md) | 华夏文
+Language: [简体中文](README.md) | 华夏文 | [English](README_en.md)
 
 # 深度求索 自动易模
 
