@@ -1,4 +1,4 @@
-语言：简体中文 | [华夏文](README_wy.md)
+语言：简体中文 | [华夏文](README_wy.md) | [English](README_en.md)
 
 # DeepSeek 自动切换
 
